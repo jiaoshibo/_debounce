@@ -9,7 +9,12 @@ container.onmousemove = setUserAction;
 document.getElementById('button').addEventListener('click', function () {
   setUserAction.cancel();
 })
-
+/**
+ * 防抖
+ * @param {Function} func 要执行的方法
+ * @param {Number} wait 等待时间
+ * @param {Boolean} immediate 是否立刻执行
+ */
 function debounce(func, wait, immediate) {
   var timeout, result;
   var debounced = function () {
